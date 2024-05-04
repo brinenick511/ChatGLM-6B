@@ -9,7 +9,7 @@ CUDA_VISIBLE_DEVICES=3 python3 main.py \
     --response_column summary \
     --overwrite_cache \
     --model_name_or_path /data/yanghq/models/THUDM/chatglm-6b \
-    --output_dir /data/yanghq/outputs/adgen-chatglm-6b-pt-$PRE_SEQ_LEN-$LR \
+    --output_dir /data/yanghq/outputs/pt-4b-$PRE_SEQ_LEN-$LR \
     --overwrite_output_dir \
     --max_source_length 64 \
     --max_target_length 64 \
