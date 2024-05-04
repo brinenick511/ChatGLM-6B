@@ -106,6 +106,7 @@ def main():
     # Load pretrained model and tokenizer
     config = AutoConfig.from_pretrained(model_args.model_name_or_path, trust_remote_code=True)
     config.pre_seq_len = model_args.pre_seq_len
+    config.ptoken = model_args.ptoken #!!!!!!
     config.prefix_projection = model_args.prefix_projection
 
     tokenizer = AutoTokenizer.from_pretrained(model_args.model_name_or_path, trust_remote_code=True)

@@ -56,6 +56,9 @@ class ModelArguments:
     pre_seq_len: Optional[int] = field(
         default=None
     )
+    ptoken: bool = field(
+        default=False
+    )
     prefix_projection: bool = field(
         default=False
     )
