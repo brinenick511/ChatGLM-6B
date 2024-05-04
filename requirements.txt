@@ -6,3 +6,8 @@ gradio
 mdtex2html
 sentencepiece
 accelerate
+
+rouge_chinese
+nltk
+jieba
+datasets
