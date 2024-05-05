@@ -4,8 +4,8 @@ STEP=3000
 
 CUDA_VISIBLE_DEVICES=1 python3 main.py \
     --do_predict \
-    --validation_file /data/yanghq/datasets/AdvertiseGen/dev.json \
-    --test_file /data/yanghq/datasets/AdvertiseGen/dev.json \
+    --validation_file /data/yanghq/datasets/AdvertiseGen/smalldev.json \
+    --test_file /data/yanghq/datasets/AdvertiseGen/smalldev.json \
     --overwrite_cache \
     --prompt_column content \
     --response_column summary \
