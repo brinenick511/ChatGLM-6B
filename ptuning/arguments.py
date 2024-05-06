@@ -56,8 +56,9 @@ class ModelArguments:
     pre_seq_len: Optional[int] = field(
         default=None
     )
-    ptoken: bool = field(
-        default=False
+    ptoken: Optional[int] = field(
+        default=0,
+        metadata={"help": "0=prepend, 1=append, 2=pre+append, 3=prepend+random, 4=random+append, 5=prepend+random+append"},
     )
     prefix_projection: bool = field(
         default=False
