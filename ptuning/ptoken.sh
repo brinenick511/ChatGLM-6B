@@ -8,8 +8,8 @@ CUDA_VISIBLE_DEVICES=1 python3 main.py \
     --prompt_column content \
     --response_column summary \
     --overwrite_cache \
-    --model_name_or_path /data/yanghq/models/YHQ/chatglm-6b \
-    --output_dir /data/yanghq/outputs/ptoken-4b-$PRE_SEQ_LEN-$LR \
+    --model_name_or_path /data/yanghq/models/THUDM/chatglm-6b-int4 \
+    --output_dir /data/yanghq/outputs/pt-mode0-int4-$PRE_SEQ_LEN-$LR \
     --overwrite_output_dir \
     --max_source_length 64 \
     --max_target_length 64 \
@@ -17,12 +17,11 @@ CUDA_VISIBLE_DEVICES=1 python3 main.py \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 16 \
     --predict_with_generate \
-    --max_steps 3000 \
-    --logging_steps 50 \
-    --save_steps 500 \
+    --max_steps 50 \
+    --logging_steps 10 \
+    --save_steps 50 \
     --learning_rate $LR \
     --quantization_bit 4 \
-    --ptoken \
     --preprocessing_num_workers 16 \
     --pre_seq_len $PRE_SEQ_LEN
 
